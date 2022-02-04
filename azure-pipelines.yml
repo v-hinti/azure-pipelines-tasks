@@ -64,7 +64,7 @@ jobs:
   condition: |
     and
     (
-      in(dependencies.courtesy_push_windows.result, 'Failed', 'Skipped', 'Success'),
+      in(dependencies.courtesy_push_windows.result, 'Failed', 'Skipped', 'Succeeded'),
       eq(variables['COURTESY_PUSH'], 'true'),
       in(variables['build.reason'], 'Schedule', 'Manual'),
       eq(variables['COURTESY_PUSH_NOTIFICATION'], 'true')
